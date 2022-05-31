@@ -10,6 +10,7 @@
 //@Configuration
 ////spring mvc 기본 구성
 //@EnableWebMvc
+//WebMvcConfigurer는 JDK8에서 제공하는 디폴트메서드를 사용하여 인터페이스의 메서드에 기본 구현을 제공한다
 //public class config implements WebMvcConfigurer {
 ////spring mvc개벌 설정을 override를 통해 개별 설정
 //
