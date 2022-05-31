@@ -1,0 +1,10 @@
+{{>layout/header}}
+<p>응답 내용:</p>
+<ul>
+    {{#ansData.responses}}
+        <li>번 문항: {{.}}</li>
+    {{/ansData.responses}}
+</ul>
+<p>응답자 위치: {{ansData.res.location}}</p>
+<p>응답자 나이: {{ansData.res.age}}</p>
+{{>layout/footer}}

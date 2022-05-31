@@ -1,0 +1,32 @@
+{{>layout/header}}
+    <h2>설문조사</h2>
+    <form method="post">
+    {{#questions}}
+    <p>
+        {{title}}<br/>
+        {{#choice}}
+            {{#options}}
+            <label><input type="radio" 
+                           name=responses[{{index}}] value={{.}}>
+                {{.}}</label>
+            {{/options}}
+        {{/choice}}
+        {{^choice}}
+        <input type="text" name=responses[{{index}}]>
+        {{/choice}}
+    </p>
+    {{/questions}}
+
+    <p>
+        <label>응답자 위치:<br>
+        <input type="text" name="res.location">
+        </label>
+    </p>
+    <p>
+        <label>응답자 나이:<br>
+        <input type="text" name="res.age">
+        </label>
+    </p>
+    <input type="submit" value="전송">
+    </form>
+{{>layout/footer}}
